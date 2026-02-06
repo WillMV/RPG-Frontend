@@ -14,7 +14,7 @@ import { socket } from "./api/socket";
 
 function App() {
   const [isDark, setIsDark] = useState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+    window.matchMedia("(prefers-color-scheme: dark)").matches,
   );
 
   const [xPixels, setXPixels] = useState(10);
@@ -56,6 +56,10 @@ function App() {
     setPlayers([{}]);
   };
 
+  useEffect(() => {
+    console.log(import.meta.env);
+  }, [import.meta.env]);
+
   const ThemeButton = () => {
     if (!isDark) {
       return (
@@ -63,7 +67,7 @@ function App() {
           <MdOutlineDarkMode
             className={clsx(
               "cursor-pointer dark:text-gray-300 overflow-clip text-gray-800 size-6",
-              colorTransition
+              colorTransition,
             )}
             onClick={() => setIsDark(true)}
           />
@@ -74,7 +78,7 @@ function App() {
         <MdOutlineLightMode
           className={clsx(
             "cursor-pointer dark:text-gray-300 size-6",
-            colorTransition
+            colorTransition,
           )}
           onClick={() => setIsDark(false)}
         />
@@ -90,7 +94,7 @@ function App() {
       <div
         className={clsx(
           "flex flex-row-reverse h-[100vh] bg-gray-200 dark:bg-gray-900",
-          colorTransition
+          colorTransition,
         )}
       >
         <SideBar open={sideBar} onClose={() => setSideBar(false)}>
@@ -137,14 +141,14 @@ function App() {
         <main
           className={clsx(
             "flex flex-col h-screen w-screen  min-w-0 overflow-clip",
-            sideBar ? " not-md:hidden" : ""
+            sideBar ? " not-md:hidden" : "",
           )}
         >
           <Header className=" justify-between gap-10">
             <button
               className={clsx(
                 "bg-gray-400 shadow-gray-00 overflow-clip cursor-pointer hover:bg-slate-600 hover:shadow-md dark:bg-gray-500  dark:hover:bg-gray-600 rounded px-2 py-1 active:shadow-md  dark:active:bg-blue-900",
-                colorTransition
+                colorTransition,
               )}
               onClick={createPlayer}
             >
