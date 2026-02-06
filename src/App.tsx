@@ -56,10 +56,6 @@ function App() {
     setPlayers([{}]);
   };
 
-  useEffect(() => {
-    console.log(import.meta.env);
-  }, [import.meta.env]);
-
   const ThemeButton = () => {
     if (!isDark) {
       return (
