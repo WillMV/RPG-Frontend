@@ -1,4 +1,4 @@
-import { useLocalConfig } from "@/context/useLocalConfig";
+import { useLocalConfig } from "@/context";
 import { colorTransition } from "@/styles";
 import clsx from "clsx";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";

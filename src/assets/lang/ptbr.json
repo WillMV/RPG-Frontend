@@ -1,0 +1,15 @@
+{
+  "create_account": "Criar conta",
+  "login": "Entrar",
+  "email": "Email",
+  "password": "Senha",
+  "confirm_password": "confirm sua senha",
+  "remember_me": "Lembrar-me",
+  "forgot_password": "Esqueci minha senha",
+  "remenbered_password": "Lembrei minha senha",
+  "already_has_account": "Já tenho uma conta",
+  "send_recovery_email": "Enviar email de recuperação",
+  "recovery_account": "Recuperar conta",
+  "recovery_account_email_sent": "Se o email estiver cadastrado, você receberá um link para recuperar sua conta.",
+  "recovery_account_email": "Email de recuperação"
+}

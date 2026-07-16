@@ -1,0 +1,15 @@
+{
+  "create_account": "create account",
+  "login": "login",
+  "email": "email",
+  "password": "password",
+  "confirm_password": "confirm password",
+  "remember_me": "remember me",
+  "forgot_password": "forgot password",
+  "remenbered_password": "remembered password",
+  "already_has_account": "I already have an account",
+  "send_recovery_email": "Send recovery email",
+  "recovery_account": "Recover account",
+  "recovery_account_email_sent": "If the email is registered, you will receive a link to recover your account.",
+  "recovery_account_email": "Recovery email"
+}

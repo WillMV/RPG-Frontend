@@ -11,6 +11,7 @@ const Button = ({
   children,
   className,
   typeButton = "button",
+  type = "button",
   ...props
 }: ButtonProps) => {
   return (
@@ -23,6 +24,7 @@ const Button = ({
           ? "bg-gray-900 hover:bg-gray-800 dark:bg-gray-300 hover:dark:bg-gray-400 dark:text-gray-900 text-white font-semibold py-2 px-4 rounded"
           : "bg-transparent hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-300 font-semibold py-2 px-4 rounded",
       )}
+      type={type}
       {...props}
     >
       {children}
