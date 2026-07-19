@@ -11,9 +11,9 @@ export interface HttpError {
 }
 
 export interface HttpRequestConfig {
-  params: Record<string, string | number | boolean | undefined>;
-  headers: Record<string, string>;
-  responseType: "json" | "blob" | "text" | "arraybuffer";
+  params?: Record<string, string | number | boolean | undefined>;
+  headers?: Record<string, string>;
+  responseType?: "json" | "blob" | "text" | "arraybuffer";
   timeout?: number;
   signal?: AbortSignal;
 }
@@ -23,20 +23,20 @@ export interface HttpClient {
   put: <R, D>(
     url: string,
     data: D,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ) => Promise<HttpResponse<R>>;
   post: <R, D>(
     url: string,
     data: D,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ) => Promise<HttpResponse<R>>;
   patch: <R, D>(
     url: string,
     data: D,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ) => Promise<HttpResponse<R>>;
   delete: <R>(
     url: string,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ) => Promise<HttpResponse<R>>;
 }

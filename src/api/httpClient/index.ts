@@ -1,5 +1,6 @@
 import axiosClient from "./axiosClient";
+import type { HttpClient } from "./types";
 
-const http = axiosClient;
+const http: HttpClient = axiosClient;
 
 export default http;

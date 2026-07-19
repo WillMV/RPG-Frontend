@@ -13,7 +13,9 @@ const AuthRouter: () => RouteObject = () => {
           <h1>Pixel RPG</h1>
           <ThemeButton />
         </Header>
-        <Outlet />
+        <div>
+          <Outlet />
+        </div>
       </div>
     ),
     children: [

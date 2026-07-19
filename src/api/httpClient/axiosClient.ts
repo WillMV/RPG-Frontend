@@ -122,4 +122,4 @@ const AxiosClient: HttpClient = {
   },
 };
 
-export default { AxiosClient };
+export default AxiosClient;
