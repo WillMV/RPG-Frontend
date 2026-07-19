@@ -1,0 +1,11 @@
+{
+  "directory": [
+    "./src/lib",
+    "./src/services"
+  ],
+  "delete": true,
+  "location": "bellow",
+  "exclude": [
+    "\\.test\\.ts$"
+  ]
+}
