@@ -19,13 +19,13 @@ axiosApi.interceptors.response.use(
 );
 
 const AxiosClient: HttpClient = {
-  get: async function <R>(url: string, config: HttpRequestConfig) {
+  get: async function <R>(url: string, config?: HttpRequestConfig) {
     const { data, headers, status } = await axiosApi.get(url, {
-      headers: config.headers,
-      params: config.params,
-      timeout: config.timeout,
-      signal: config.signal,
-      responseType: config.responseType,
+      headers: config?.headers,
+      params: config?.params,
+      timeout: config?.timeout,
+      signal: config?.signal,
+      responseType: config?.responseType,
     });
     return {
       data,
@@ -36,18 +36,18 @@ const AxiosClient: HttpClient = {
   put: async function <R, D>(
     url: string,
     data: D,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ): Promise<HttpResponse<R>> {
     const {
       data: responseData,
       headers,
       status,
     } = await axiosApi.put(url, data, {
-      headers: config.headers as unknown as AxiosHeaders,
-      params: config.params,
-      timeout: config.timeout,
-      signal: config.signal,
-      responseType: config.responseType,
+      headers: config?.headers as unknown as AxiosHeaders,
+      params: config?.params,
+      timeout: config?.timeout,
+      signal: config?.signal,
+      responseType: config?.responseType,
     });
     return {
       data: responseData,
@@ -58,18 +58,18 @@ const AxiosClient: HttpClient = {
   post: async function <R, D>(
     url: string,
     data: D,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ): Promise<HttpResponse<R>> {
     const {
       data: responseData,
       headers,
       status,
     } = await axiosApi.put(url, data, {
-      headers: config.headers as unknown as AxiosHeaders,
-      params: config.params,
-      timeout: config.timeout,
-      signal: config.signal,
-      responseType: config.responseType,
+      headers: config?.headers as unknown as AxiosHeaders,
+      params: config?.params,
+      timeout: config?.timeout,
+      signal: config?.signal,
+      responseType: config?.responseType,
     });
     return {
       data: responseData,
@@ -80,18 +80,18 @@ const AxiosClient: HttpClient = {
   patch: async function <R, D>(
     url: string,
     data: D,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ): Promise<HttpResponse<R>> {
     const {
       data: responseData,
       headers,
       status,
     } = await axiosApi.patch(url, data, {
-      headers: config.headers as unknown as AxiosHeaders,
-      params: config.params,
-      timeout: config.timeout,
-      signal: config.signal,
-      responseType: config.responseType,
+      headers: config?.headers as unknown as AxiosHeaders,
+      params: config?.params,
+      timeout: config?.timeout,
+      signal: config?.signal,
+      responseType: config?.responseType,
     });
     return {
       data: responseData,
@@ -101,18 +101,18 @@ const AxiosClient: HttpClient = {
   },
   delete: async function <R>(
     url: string,
-    config: HttpRequestConfig,
+    config?: HttpRequestConfig,
   ): Promise<HttpResponse<R>> {
     const {
       data: responseData,
       headers,
       status,
     } = await axiosApi.delete(url, {
-      headers: config.headers as unknown as AxiosHeaders,
-      params: config.params,
-      timeout: config.timeout,
-      signal: config.signal,
-      responseType: config.responseType,
+      headers: config?.headers as unknown as AxiosHeaders,
+      params: config?.params,
+      timeout: config?.timeout,
+      signal: config?.signal,
+      responseType: config?.responseType,
     });
     return {
       data: responseData,
